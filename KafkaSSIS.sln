@@ -8,10 +8,13 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
+		Productive|Default = Productive|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7C97C30F-3647-4565-B46E-3590AD9313C7}.Development|Default.ActiveCfg = Development
 		{7C97C30F-3647-4565-B46E-3590AD9313C7}.Development|Default.Build.0 = Development
+		{7C97C30F-3647-4565-B46E-3590AD9313C7}.Productive|Default.ActiveCfg = Productive
+		{7C97C30F-3647-4565-B46E-3590AD9313C7}.Productive|Default.Build.0 = Productive
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

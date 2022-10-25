@@ -1,2 +1,45 @@
 ﻿<?xml version="1.0"?>
-<SSIS:Parameters xmlns:SSIS="www.microsoft.com/SqlServer/SSIS" />
+<SSIS:Parameters xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
+  <SSIS:Parameter
+    SSIS:Name="JSONUrl">
+    <SSIS:Properties>
+      <SSIS:Property
+        SSIS:Name="ID">{59c0eeb0-1e0b-4f6a-a47c-a4e3de9ac87a}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description">Url to webservice</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">1</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value">http://productive.example.org</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
+    </SSIS:Properties>
+  </SSIS:Parameter>
+  <SSIS:Parameter
+    SSIS:Name="KafkaServer">
+    <SSIS:Properties>
+      <SSIS:Property
+        SSIS:Name="ID">{a73f1018-8025-497a-8512-f9bc3eb0cdda}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description">kafka bootstrap server</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">1</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value">prod.kafka.example.org</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
+    </SSIS:Properties>
+  </SSIS:Parameter>
+</SSIS:Parameters>

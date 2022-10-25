@@ -26,26 +26,26 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-383KATL</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4tMJJzyQekq709tDq81SYwAAAAACAAAAAAAQZgAAAAEAACAAAABf+6/C1zMt7uApOYWggUVk4kkKxqsOCrF3L3zmFNM+8wAAAAAOgAAAAAIAACAAAAC5j3m1MjnhCir37KIQdARej7A1D7+GjZ2wbbfo7NgkVJAAAAAlW1OT70xxwDfL5e3J/Nvu18JjoEpaXi7jvOa+HppqIglnQe4oVpIsx6cmjKNnEcj+JFYZFJCXrClBGrw9amamaLXGsg4WJh2TLchc5KvsInH93mMGHWqiY8oMBcmz9DLuM7a43CyjbRHBPiACXSJ8F8P8GJxiZ7Jnny8MFCpqC1q+d4cWP3dv7gaVxYusWi1AAAAA7m0N2yZ1PQrx28+h193TyFNPmS1Wyw0gcqtYQUeq5y0WX+Rb8OAWXtVVrTVrSUuA4wZ2gUR3CK3bIVDreITaaw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4tMJJzyQekq709tDq81SYwAAAAACAAAAAAAQZgAAAAEAACAAAABqd4mzQA+L4v5HR3uOKBDI7BdqLgA6wZp6WkKnkxEVigAAAAAOgAAAAAIAACAAAAAeZlN98u9fz/b2xwLEThICyGXyzD9Qw9OFN+PIiviMz5AAAADtyaNZrWtGcykQhvJBL0O9P3tlXdUN/V882YMcfL26Tfu4KCJerGZXWYyS1kpbeV01zo7klRyssAyAH04uxyXyFWFhja3KCLtgfKWJ0/st8wR8UUx8Pq64zxU6JbbFyzrXH1d3KoyPuJB9xxVi4KC0Jb5CDXimiD84HClmH7QdqSASVCWXGUAnU24GwHSnCThAAAAAca3/pMHXpAiq7IaLtdKLoimQwdhCG9UyshtJdFBrS5TrQoayUIMk/o+erL+HTyKHnx66FHff9PYvQHZa+b0eWA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="Package.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="ToKafkaFlows.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
           <SSIS:ProjectConnectionParameters />
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="Package.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="ToKafkaFlows.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{1B4E5FB9-32CB-4125-A8C2-568B420F32ED}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{F1626A7D-E593-4E3B-98D3-3AF2BD0CAAD2}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{E391D849-D675-472D-82A2-0E6869EAC585}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -459,14 +459,14 @@
                     <SSIS:Property SSIS:Name="Value">BaseUrl=https://www.mesonengehirn.de;AuthenticationMode=Credentials;JwtClaims='{
   "header": {},
   "payload": {}
-}';JwtKeyFile=;CustomTokenCurlFile=;CustomTokenFindStrategy=JPath;CustomTokenFindExpression=;CustomTokenExpiry=0;AwsSignatureVersion=Version4;AwsSignatureMethod=HmacSHA1;AwsAccessKey=;AwsRegion=;AwsServiceName=;AzureOAuthType=ClientCredentials;AzureTenantId=;AzureClientId=;AzureCertificateLocation=Store;AzureCertificateThumbprint=;AzurePathToCertificate=;GoogleServiceAccount=;GoogleCertificateLocation=Store;GoogleCertificateThumbprint=;GooglePathToCertificate=;GoogleScope=;AzureScope=;PathToTokenFile=;AccessTokenRequestLocation=HttpHeader;Domain=;UserName=;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0;ThrottleRate=0;ThrottleRateUnit=PerSecond;ServiceTimeout=120;RetryOnIntermittentErrors=True;AllowAutoRedirect=True;ChunkSize=0;CertificateLocation=Store;CertificateThumbprint=;IgnoreCertificateErrors=False;CustomHeaders='{
+}';JwtKeyFile=;CustomTokenCurlFile=;CustomTokenFindStrategy=JPath;CustomTokenFindExpression=;CustomTokenExpiry=0;AwsSignatureVersion=Version4;AwsSignatureMethod=HmacSHA1;AwsAccessKey=;AwsRegion=;AwsServiceName=;AzureOAuthType=ClientCredentials;AzureTenantId=;AzureClientId=;AzureCertificateLocation=Store;AzureCertificateThumbprint=;AzurePathToCertificate=;GoogleServiceAccount=;GoogleCertificateLocation=Store;GoogleCertificateThumbprint=;GooglePathToCertificate=;GoogleScope=;AzureScope=;PathToTokenFile=;AccessTokenRequestLocation=HttpHeader;Domain=;UserName=;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0;ThrottleRate=0;ThrottleRateUnit=PerSecond;ServiceTimeout=120;RetryOnIntermittentErrors=True;AllowAutoRedirect=True;ChunkSize=0;CertificateLocation=Store;CertificateThumbprint=;PathToCertificate=;IgnoreCertificateErrors=False;CustomHeaders='{
   "User-Agent": {
     "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) SSIS Productivity Pack by KingswaySoft (like Gecko)"
   },
   "Accept-Encoding": {
     "value": "gzip, deflate"
   }
-}';ErrorCodes='[{"code":"408","retryable":true},{"code":"500","retryable":false},{"code":"502","retryable":true},{"code":"503","retryable":true},{"code":"504","retryable":true}]'</SSIS:Property>
+}';HttpMethod=POST;ErrorCodes='[{"code":"408","retryable":true},{"code":"500","retryable":false},{"code":"502","retryable":true},{"code":"503","retryable":true},{"code":"504","retryable":true}]'</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -780,6 +780,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -916,7 +918,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">150</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">160</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1445,7 +1447,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">150</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">160</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1928,7 +1930,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">150</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">160</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1975,7 +1977,51 @@
           <ConfigurationSetting>
             <Id>LastModifiedTime</Id>
             <Name>LastModifiedTime</Name>
-            <Value xsi:type="xsd:dateTime">2022-10-20T14:45:21.9901114Z</Value>
+            <Value xsi:type="xsd:dateTime">2022-10-25T17:21:05.9932115Z</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{59c0eeb0-1e0b-4f6a-a47c-a4e3de9ac87a}</Id>
+            <Name>Project::JSONUrl</Name>
+            <Value xsi:type="xsd:string">http://dev.example.org</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{a73f1018-8025-497a-8512-f9bc3eb0cdda}</Id>
+            <Name>Project::KafkaServer</Name>
+            <Value xsi:type="xsd:string">dev.kafka.example.org</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationValues>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>Productive</Name>
+      <Options>
+        <OutputPath>bin</OutputPath>
+        <ConnectionMappings />
+        <ConnectionProviderMappings />
+        <ConnectionSecurityMappings />
+        <DatabaseStorageLocations />
+        <TargetServerVersion>SQLServer2019</TargetServerVersion>
+        <AzureMode>false</AzureMode>
+        <LinkedAzureTenantId />
+        <LinkedAzureAccountId />
+        <LinkedAzureSSISIR />
+        <LinkedAzureStorage />
+        <RemoteExecutionFolder />
+        <ParameterConfigurationValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2022-10-25T17:21:05.9932115Z</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{59c0eeb0-1e0b-4f6a-a47c-a4e3de9ac87a}</Id>
+            <Name>Project::JSONUrl</Name>
+            <Value xsi:type="xsd:string">http://productive.example.org</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{a73f1018-8025-497a-8512-f9bc3eb0cdda}</Id>
+            <Name>Project::KafkaServer</Name>
+            <Value xsi:type="xsd:string">prod.kafka.example.org</Value>
           </ConfigurationSetting>
         </ParameterConfigurationValues>
       </Options>
