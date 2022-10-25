@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{E391D849-D675-472D-82A2-0E6869EAC585}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{7D9A4533-09C6-4A9F-BF05-7CD2F31FBB67}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -21,9 +21,11 @@
       DTS:CreationName="HTTP (KingswaySoft)"
       DTS:DTSID="{CF527D56-ADEC-42CE-94AC-9ADDB7D5FE24}"
       DTS:ObjectName="HTTP Connection Manager">
+      <DTS:PropertyExpression
+        DTS:Name="BaseUrl">@[$Project::KafkaServer]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <ConnectionManager
-          ConnectionString="BaseUrl=https://www.mesonengehirn.de;AuthenticationMode=Credentials;JwtClaims='{&#xA;  &quot;header&quot;: {},&#xA;  &quot;payload&quot;: {}&#xA;}';JwtKeyFile=;CustomTokenCurlFile=;CustomTokenFindStrategy=JPath;CustomTokenFindExpression=;CustomTokenExpiry=0;AwsSignatureVersion=Version4;AwsSignatureMethod=HmacSHA1;AwsAccessKey=;AwsRegion=;AwsServiceName=;AzureOAuthType=ClientCredentials;AzureTenantId=;AzureClientId=;AzureCertificateLocation=Store;AzureCertificateThumbprint=;AzurePathToCertificate=;GoogleServiceAccount=;GoogleCertificateLocation=Store;GoogleCertificateThumbprint=;GooglePathToCertificate=;GoogleScope=;AzureScope=;PathToTokenFile=;AccessTokenRequestLocation=HttpHeader;Domain=;UserName=;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0;ThrottleRate=0;ThrottleRateUnit=PerSecond;ServiceTimeout=120;RetryOnIntermittentErrors=True;AllowAutoRedirect=True;ChunkSize=0;CertificateLocation=Store;CertificateThumbprint=;PathToCertificate=;IgnoreCertificateErrors=False;CustomHeaders='{&#xA;  &quot;User-Agent&quot;: {&#xA;    &quot;value&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) SSIS Productivity Pack by KingswaySoft (like Gecko)&quot;&#xA;  },&#xA;  &quot;Accept-Encoding&quot;: {&#xA;    &quot;value&quot;: &quot;gzip, deflate&quot;&#xA;  }&#xA;}';HttpMethod=POST;ErrorCodes='[{&quot;code&quot;:&quot;408&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;500&quot;,&quot;retryable&quot;:false},{&quot;code&quot;:&quot;502&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;503&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;504&quot;,&quot;retryable&quot;:true}]'"
+          ConnectionString="BaseUrl=prod.kafka.example.org;AuthenticationMode=Credentials;JwtClaims='{&#xA;  &quot;header&quot;: {},&#xA;  &quot;payload&quot;: {}&#xA;}';JwtKeyFile=;CustomTokenCurlFile=;CustomTokenFindStrategy=JPath;CustomTokenFindExpression=;CustomTokenExpiry=0;AwsSignatureVersion=Version4;AwsSignatureMethod=HmacSHA1;AwsAccessKey=;AwsRegion=;AwsServiceName=;AzureOAuthType=ClientCredentials;AzureTenantId=;AzureClientId=;AzureCertificateLocation=Store;AzureCertificateThumbprint=;AzurePathToCertificate=;GoogleServiceAccount=;GoogleCertificateLocation=Store;GoogleCertificateThumbprint=;GooglePathToCertificate=;GoogleScope=;AzureScope=;PathToTokenFile=;AccessTokenRequestLocation=HttpHeader;Domain=;UserName=;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0;ThrottleRate=0;ThrottleRateUnit=PerSecond;ServiceTimeout=120;RetryOnIntermittentErrors=True;AllowAutoRedirect=True;ChunkSize=0;CertificateLocation=Store;CertificateThumbprint=;PathToCertificate=;IgnoreCertificateErrors=False;CustomHeaders='{&#xA;  &quot;User-Agent&quot;: {&#xA;    &quot;value&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) SSIS Productivity Pack by KingswaySoft (like Gecko)&quot;&#xA;  },&#xA;  &quot;Accept-Encoding&quot;: {&#xA;    &quot;value&quot;: &quot;gzip, deflate&quot;&#xA;  }&#xA;}';HttpMethod=POST;ErrorCodes='[{&quot;code&quot;:&quot;408&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;500&quot;,&quot;retryable&quot;:false},{&quot;code&quot;:&quot;502&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;503&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;504&quot;,&quot;retryable&quot;:true}]'"
           ConnectByProxy="False" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -38,7 +40,7 @@
           ConnectByProxy="False">
           <SaslPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4tMJJzyQekq709tDq81SYwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABO/BNiFRXXg/Q56O9td/NWzfHHNG4VGE1z6SnE56l3EQAAAAAOgAAAAAIAACAAAACfhhe3ZuH57LpmPldBETJ0iu0IUh64srwcwFS02SDHfJAAAABpoV04Xoeu4toTmYPKkJ5x+goWK5MZqARfjRGZNmS7DVGLZuPAXM33O4RB4ZGmUqOtnv81HKpPxrTwMIhUewpMege8kylAS9bE7j2t5SWnFHRY3j9nB17hvV1WB0YWTHO9Io47I5iaMxrHWLzg2ks+Jn3sPfQgP+99xq+r2pY54RqZgvu6weH3DcsO9E+ZxE1AAAAAHc2AcXERHg3iVTdbujvMOBQaS1Q16qHBp2/+wjdp/y4YmtB1cjsnuXHMV+A7Uv4OpVt8oCjit6QSFiwAlUcItA</SaslPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4tMJJzyQekq709tDq81SYwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACahglGW8f/280qBo7P1XFw3vasZjE4OvNh79/mMiZ5IwAAAAAOgAAAAAIAACAAAAAOxTsSeu54mFkEgvb3XIjHuJ6Qy3USFUZfMXt25GBgIZAAAADVM4pv1cdEu68REEizx7BQMe9llwltbM04chvH60neYAehA2s/1XCOyNc5GqNevnPkO3wqXTypmT2Ti4pS8fNQdC+RCGe8PO5kG08HaS8B3tPllXVkFgzB+nwdrObB+eGznYNn5wOvbmi2VeoR4jL/3iBqznlBNAI0/CAbbyeG6KVBr0jIL5jIGj2iJBqBkzxAAAAAnBSZhvOfZRf6pdIJGbObyB8R/WknEicCZlwGUKLxSoECv+RbJJeH9qTJyWQGmSor7v/HkcZ2KEmBdNX3ChJRhg</SaslPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -393,19 +395,19 @@
                   expressionType="Notify"
                   name="Tokens">[
   {
-    "id": 55,
+    "id": 25,
     "name": "name"
   },
   {
-    "id": 57,
+    "id": 26,
     "name": "email"
   },
   {
-    "id": 50,
+    "id": 24,
     "name": "_RowIndex"
   },
   {
-    "id": 59,
+    "id": 27,
     "name": "text"
   }
 ]</property>

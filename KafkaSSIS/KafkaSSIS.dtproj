@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-383KATL</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4tMJJzyQekq709tDq81SYwAAAAACAAAAAAAQZgAAAAEAACAAAABqd4mzQA+L4v5HR3uOKBDI7BdqLgA6wZp6WkKnkxEVigAAAAAOgAAAAAIAACAAAAAeZlN98u9fz/b2xwLEThICyGXyzD9Qw9OFN+PIiviMz5AAAADtyaNZrWtGcykQhvJBL0O9P3tlXdUN/V882YMcfL26Tfu4KCJerGZXWYyS1kpbeV01zo7klRyssAyAH04uxyXyFWFhja3KCLtgfKWJ0/st8wR8UUx8Pq64zxU6JbbFyzrXH1d3KoyPuJB9xxVi4KC0Jb5CDXimiD84HClmH7QdqSASVCWXGUAnU24GwHSnCThAAAAAca3/pMHXpAiq7IaLtdKLoimQwdhCG9UyshtJdFBrS5TrQoayUIMk/o+erL+HTyKHnx66FHff9PYvQHZa+b0eWA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4tMJJzyQekq709tDq81SYwAAAAACAAAAAAAQZgAAAAEAACAAAACDTzCAoT0bQnyuWrIiKvrkzhdtkEfoJqKCPKrf0dnBSQAAAAAOgAAAAAIAACAAAAB+HhlorU9xw8mWCJOM4pL+/ZWMhLyB3OPTbDDiWaBU+JAAAAD5urv2Fj2yc81+OGWJT+SR8P1LmziHSU70f5pzJ+E1QS8OfMFDnxPjryEdBkTf3Zm5sulZwzhMLQTKp7YuF/7Hszm/awIG897Dh1H9p2wWrrGqRsXSNKZvRaxWhjkQ5WUaaO7/TmRLXtQ2toc+YXUBJ9tMnjXd/TJAL7f3jQrWvn66jlEYp+A8teIB+OxHJUlAAAAAXhwnSYZpe5Z+73ozvD4lwJkw031UMH+QaWSi4vcgMohS+T32opjeXhIQn62gUkD+mDkp7rk8rSmXvb8fqDXfog==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">15</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{E391D849-D675-472D-82A2-0E6869EAC585}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{7D9A4533-09C6-4A9F-BF05-7CD2F31FBB67}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -341,21 +341,6 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.HTTP Connection Manager.BaseUrl">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">https://www.mesonengehirn.de</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="CM.HTTP Connection Manager.BearerToken">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
@@ -456,7 +441,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">BaseUrl=https://www.mesonengehirn.de;AuthenticationMode=Credentials;JwtClaims='{
+                    <SSIS:Property SSIS:Name="Value">BaseUrl=prod.kafka.example.org;AuthenticationMode=Credentials;JwtClaims='{
   "header": {},
   "payload": {}
 }';JwtKeyFile=;CustomTokenCurlFile=;CustomTokenFindStrategy=JPath;CustomTokenFindExpression=;CustomTokenExpiry=0;AwsSignatureVersion=Version4;AwsSignatureMethod=HmacSHA1;AwsAccessKey=;AwsRegion=;AwsServiceName=;AzureOAuthType=ClientCredentials;AzureTenantId=;AzureClientId=;AzureCertificateLocation=Store;AzureCertificateThumbprint=;AzurePathToCertificate=;GoogleServiceAccount=;GoogleCertificateLocation=Store;GoogleCertificateThumbprint=;GooglePathToCertificate=;GoogleScope=;AzureScope=;PathToTokenFile=;AccessTokenRequestLocation=HttpHeader;Domain=;UserName=;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0;ThrottleRate=0;ThrottleRateUnit=PerSecond;ServiceTimeout=120;RetryOnIntermittentErrors=True;AllowAutoRedirect=True;ChunkSize=0;CertificateLocation=Store;CertificateThumbprint=;PathToCertificate=;IgnoreCertificateErrors=False;CustomHeaders='{
@@ -918,7 +903,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">160</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">150</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1447,7 +1432,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">160</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">150</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1930,7 +1915,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">160</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">150</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
