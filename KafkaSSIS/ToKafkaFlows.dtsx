@@ -1,0 +1,686 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/20/2022 4:23:29 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-383KATL"
+  DTS:CreatorName="DESKTOP-383KATL\ramon"
+  DTS:DTSID="{1B4E5FB9-32CB-4125-A8C2-568B420F32ED}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.845.0"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{E391D849-D675-472D-82A2-0E6869EAC585}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[HTTP Connection Manager]"
+      DTS:CreationName="HTTP (KingswaySoft)"
+      DTS:DTSID="{CF527D56-ADEC-42CE-94AC-9ADDB7D5FE24}"
+      DTS:ObjectName="HTTP Connection Manager">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="BaseUrl=https://www.mesonengehirn.de;AuthenticationMode=Credentials;JwtClaims='{&#xA;  &quot;header&quot;: {},&#xA;  &quot;payload&quot;: {}&#xA;}';JwtKeyFile=;CustomTokenCurlFile=;CustomTokenFindStrategy=JPath;CustomTokenFindExpression=;CustomTokenExpiry=0;AwsSignatureVersion=Version4;AwsSignatureMethod=HmacSHA1;AwsAccessKey=;AwsRegion=;AwsServiceName=;AzureOAuthType=ClientCredentials;AzureTenantId=;AzureClientId=;AzureCertificateLocation=Store;AzureCertificateThumbprint=;AzurePathToCertificate=;GoogleServiceAccount=;GoogleCertificateLocation=Store;GoogleCertificateThumbprint=;GooglePathToCertificate=;GoogleScope=;AzureScope=;PathToTokenFile=;AccessTokenRequestLocation=HttpHeader;Domain=;UserName=;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0;ThrottleRate=0;ThrottleRateUnit=PerSecond;ServiceTimeout=120;RetryOnIntermittentErrors=True;AllowAutoRedirect=True;ChunkSize=0;CertificateLocation=Store;CertificateThumbprint=;PathToCertificate=;IgnoreCertificateErrors=False;CustomHeaders='{&#xA;  &quot;User-Agent&quot;: {&#xA;    &quot;value&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) SSIS Productivity Pack by KingswaySoft (like Gecko)&quot;&#xA;  },&#xA;  &quot;Accept-Encoding&quot;: {&#xA;    &quot;value&quot;: &quot;gzip, deflate&quot;&#xA;  }&#xA;}';HttpMethod=POST;ErrorCodes='[{&quot;code&quot;:&quot;408&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;500&quot;,&quot;retryable&quot;:false},{&quot;code&quot;:&quot;502&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;503&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;504&quot;,&quot;retryable&quot;:true}]'"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Kafka Connection Manager]"
+      DTS:CreationName="Kafka (KingswaySoft)"
+      DTS:DTSID="{5B6C55EE-FB28-4714-B435-443ADE1767F7}"
+      DTS:ObjectName="Kafka Connection Manager">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="BootstrapServers=pkc-w7d6j.germanywestcentral.azure.confluent.cloud:9092;SecurityProtocol=Plaintext;SaslPassword=CLZNLGm9ANv3/KwzZ97CVsyYMBq/6ePg8/LXZLqqnTqqY4jF/KX6TXmau3lntfVn;BrokerAddressFamily=Default;SslEndpointIdentificationAlgorithm=Default"
+          ConnectByProxy="False">
+          <SaslPassword
+            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4tMJJzyQekq709tDq81SYwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABO/BNiFRXXg/Q56O9td/NWzfHHNG4VGE1z6SnE56l3EQAAAAAOgAAAAAIAACAAAACfhhe3ZuH57LpmPldBETJ0iu0IUh64srwcwFS02SDHfJAAAABpoV04Xoeu4toTmYPKkJ5x+goWK5MZqARfjRGZNmS7DVGLZuPAXM33O4RB4ZGmUqOtnv81HKpPxrTwMIhUewpMege8kylAS9bE7j2t5SWnFHRY3j9nB17hvV1WB0YWTHO9Io47I5iaMxrHWLzg2ks+Jn3sPfQgP+99xq+r2pY54RqZgvu6weH3DcsO9E+ZxE1AAAAAHc2AcXERHg3iVTdbujvMOBQaS1Q16qHBp2/+wjdp/y4YmtB1cjsnuXHMV+A7Uv4OpVt8oCjit6QSFiwAlUcItA</SaslPassword>
+        </ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[opmv]"
+      DTS:CreationName="Kafka (KingswaySoft)"
+      DTS:DTSID="{7CD4108A-A24B-43E9-A85D-9B2BA350DC75}"
+      DTS:ObjectName="opmv">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="BootstrapServers=opmv:9902;SecurityProtocol=Plaintext;BrokerAddressFamily=Default;SslEndpointIdentificationAlgorithm=Default"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Datenflusstask 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Datenflusstask"
+      DTS:DTSID="{8744BD3C-3EF3-42D2-90E9-F0E532A3D818}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Datenflusstask 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Datenflusstask 1\JSON Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="KingswaySoft Inc.; http://www.kingswaysoft.com; support@kingswaysoft.com; Copyright (c) 2022 KingswaySoft Inc."
+              description="Retrieves JSON documents and extracts them into columns."
+              name="JSON Source"
+              usesDispositions="true"
+              version="5">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="Design">[{"NodeType":1,"OutputType":"Output","OutputOrColumnName":"Root","Children":[{"NodeType":2,"OutputType":"None","Children":[{"NodeName":"name","NodeType":3,"OutputType":"Column","OutputOrColumnName":"name"},{"NodeName":"email","NodeType":3,"OutputType":"Column","OutputOrColumnName":"email"},{"NodeName":"text","NodeType":3,"OutputType":"Column","OutputOrColumnName":"text"}]}]}]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the text qualifier to use when merging repeated values."
+                  expressionType="Notify"
+                  name="IsRepeatedTextQualifier">Double-Quote ( " )</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the text delimiter to use when merging repeated values."
+                  expressionType="Notify"
+                  name="IsRepeatedTextDelimiter">Comma ( , )</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how to read null values from the document."
+                  expressionType="Notify"
+                  name="NullMode"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.JsonExtractNullMode">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the timzone to convert DateTimes to"
+                  expressionType="Notify"
+                  name="OutputTimezone"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.TimeZone">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the text encoding to use when reading the document."
+                  expressionType="Notify"
+                  name="Encoding">65001</property>
+                <property
+                  dataType="System.String"
+                  description="The relative path of the HTTP request that will be combined with the base path from the connection manager."
+                  expressionType="Notify"
+                  name="RelativePath">{"IsExpression":false,"Value":"mockdata.php"}</property>
+                <property
+                  dataType="System.String"
+                  description="The body of the HTTP request."
+                  expressionType="Notify"
+                  name="RequestBody">{"IsExpression":false,"Value":""}</property>
+                <property
+                  dataType="System.String"
+                  description="The headers that will be used in the request."
+                  expressionType="Notify"
+                  name="RequestHeaders">[]</property>
+                <property
+                  dataType="System.String"
+                  description="The query string parameters that will be used in the request."
+                  expressionType="Notify"
+                  name="RequestQueryStringParameters">[]</property>
+                <property
+                  dataType="System.String"
+                  description="The expression that determines if requests should keep being sent."
+                  expressionType="Notify"
+                  name="RequestAgainRule"></property>
+                <property
+                  dataType="System.String"
+                  description="The HTTP Method to use when sending requests."
+                  expressionType="Notify"
+                  name="HttpMethod">GET</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the variable to get the json document from."
+                  expressionType="Notify"
+                  name="InputVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the path to the Item to get the json document from."
+                  expressionType="Notify"
+                  name="LocalFilePath"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The max number of identical requests that will be before an error is raised."
+                  expressionType="Notify"
+                  name="MaxIdenticalRequests">1</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">KingswaySoft.IntegrationToolkit.ProductivityPack.JsonSourceComponent</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask 1\JSON Source.Connections[HTTP (KingswaySoft)]"
+                  connectionManagerID="Package.ConnectionManagers[HTTP Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[HTTP Connection Manager]"
+                  description="Connection manager for HTTP connections."
+                  name="HTTP (KingswaySoft)" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask 1\JSON Source.Outputs[Root]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Root"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="KeyField"
+                      name="KeyField">#{Package\Datenflusstask 1\JSON Source.Outputs[Root].ExternalColumns[_RowIndex]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="RowIndexField"
+                      name="RowIndexField">#{Package\Datenflusstask 1\JSON Source.Outputs[Root].ExternalColumns[_RowIndex]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="ParentId"
+                      name="ParentId">#{Package\Datenflusstask 1\-1:invalid}</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask 1\JSON Source.Outputs[Root].Columns[_RowIndex]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Datenflusstask 1\JSON Source.Outputs[Root].ExternalColumns[_RowIndex]"
+                      lineageId="Package\Datenflusstask 1\JSON Source.Outputs[Root].Columns[_RowIndex]"
+                      name="_RowIndex"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask 1\JSON Source.Outputs[Root].Columns[name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Datenflusstask 1\JSON Source.Outputs[Root].ExternalColumns[name]"
+                      length="50"
+                      lineageId="Package\Datenflusstask 1\JSON Source.Outputs[Root].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask 1\JSON Source.Outputs[Root].Columns[email]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Datenflusstask 1\JSON Source.Outputs[Root].ExternalColumns[email]"
+                      length="255"
+                      lineageId="Package\Datenflusstask 1\JSON Source.Outputs[Root].Columns[email]"
+                      name="email"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask 1\JSON Source.Outputs[Root].Columns[text]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Datenflusstask 1\JSON Source.Outputs[Root].ExternalColumns[text]"
+                      length="4000"
+                      lineageId="Package\Datenflusstask 1\JSON Source.Outputs[Root].Columns[text]"
+                      name="text"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask 1\JSON Source.Outputs[Root].ExternalColumns[_RowIndex]"
+                      dataType="i8"
+                      name="_RowIndex" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask 1\JSON Source.Outputs[Root].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="50"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask 1\JSON Source.Outputs[Root].ExternalColumns[email]"
+                      dataType="wstr"
+                      length="255"
+                      name="email" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask 1\JSON Source.Outputs[Root].ExternalColumns[text]"
+                      dataType="wstr"
+                      length="4000"
+                      name="text" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask 1\Kafka Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="KingswaySoft Inc.; http://www.kingswaysoft.com; support@kingswaysoft.com; Copyright (c) 2022 KingswaySoft Inc."
+              description="Populate data into Kafka."
+              name="Kafka Destination"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The encoding of received messages."
+                  expressionType="Notify"
+                  name="Encoding">65001</property>
+                <property
+                  dataType="System.Int32"
+                  description="The type of the message, either text or binary."
+                  expressionType="Notify"
+                  name="MessageColumnType"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.MessageColumnType">1</property>
+                <property
+                  dataType="System.String"
+                  description="The topic to produce messages for."
+                  expressionType="Notify"
+                  name="Topic">kingswayout</property>
+                <property
+                  dataType="System.Int32"
+                  description="Compression type to use when sending messages."
+                  expressionType="Notify"
+                  name="CompressionType"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.KafkaCompressionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Batch size to use when sending messages."
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">KingswaySoft.IntegrationToolkit.ProductivityPack.KafkaDestinationComponent</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask 1\Kafka Destination.Connections[Kafka (KingswaySoft)]"
+                  connectionManagerID="Package.ConnectionManagers[opmv]"
+                  connectionManagerRefId="Package.ConnectionManagers[opmv]"
+                  description="Connection Manager for Kafka."
+                  name="Kafka (KingswaySoft)" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask 1\Kafka Destination.Inputs[Primary Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Primary Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask 1\Kafka Destination.Inputs[Primary Input].Columns[MergedText]"
+                      cachedDataType="nText"
+                      cachedName="MergedText"
+                      externalMetadataColumnId="Package\Datenflusstask 1\Kafka Destination.Inputs[Primary Input].ExternalColumns[Message]"
+                      lineageId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[MergedText]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask 1\Kafka Destination.Inputs[Primary Input].ExternalColumns[Key]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Key" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask 1\Kafka Destination.Inputs[Primary Input].ExternalColumns[Message]"
+                      codePage="65001"
+                      dataType="text"
+                      name="Message" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask 1\Kafka Destination.Inputs[Primary Input].ExternalColumns[Partition]"
+                      dataType="i4"
+                      name="Partition" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask 1\Kafka Destination.Outputs[Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Error Output"
+                  synchronousInputId="Package\Datenflusstask 1\Kafka Destination.Inputs[Primary Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask 1\Kafka Destination.Outputs[Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask 1\Kafka Destination.Outputs[Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask 1\Kafka Destination.Outputs[Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask 1\Kafka Destination.Outputs[Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Datenflusstask 1\Kafka Destination.Outputs[Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="2048"
+                      lineageId="Package\Datenflusstask 1\Kafka Destination.Outputs[Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Datenflusstask 1\Kafka Destination.Outputs[Default Output]"
+                  exclusionGroup="1"
+                  name="Default Output"
+                  synchronousInputId="Package\Datenflusstask 1\Kafka Destination.Inputs[Primary Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask 1\Text Merge"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="KingswaySoft Inc.; http://www.kingswaysoft.com; support@kingswaysoft.com; Copyright (c) 2022 KingswaySoft Inc."
+              description="Insert column data into a plain text template."
+              name="Text Merge"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The text template used to merge."
+                  expressionType="Notify"
+                  name="Template">{
+  "name":"@column[name]",
+  "email":"@column[email]"
+}</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="The token mappings for column names to their ID."
+                  expressionType="Notify"
+                  name="Tokens">[
+  {
+    "id": 55,
+    "name": "name"
+  },
+  {
+    "id": 57,
+    "name": "email"
+  },
+  {
+    "id": 50,
+    "name": "_RowIndex"
+  },
+  {
+    "id": 59,
+    "name": "text"
+  }
+]</property>
+                <property
+                  containsID="true"
+                  dataType="System.Int32"
+                  description="The id of the output column to direct the merged text to."
+                  expressionType="Notify"
+                  name="OutputColumnId">#{Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[MergedText]}</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how to merge header and footer with merged records."
+                  expressionType="Notify"
+                  name="MergeMode"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.TextMergeMode">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the batch size for 'Every Batch' Merge Mode."
+                  expressionType="Notify"
+                  name="BatchSize">500</property>
+                <property
+                  dataType="System.String"
+                  expressionType="Notify"
+                  name="Header"></property>
+                <property
+                  dataType="System.String"
+                  expressionType="Notify"
+                  name="Footer"></property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">KingswaySoft.IntegrationToolkit.ProductivityPack.TextMergeComponent</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask 1\Text Merge.Inputs[Primary Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Primary Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask 1\Text Merge.Inputs[Primary Input].Columns[_RowIndex]"
+                      cachedDataType="i8"
+                      cachedName="_RowIndex"
+                      externalMetadataColumnId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[_RowIndex]"
+                      lineageId="Package\Datenflusstask 1\JSON Source.Outputs[Root].Columns[_RowIndex]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask 1\Text Merge.Inputs[Primary Input].Columns[name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="name"
+                      externalMetadataColumnId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[name]"
+                      lineageId="Package\Datenflusstask 1\JSON Source.Outputs[Root].Columns[name]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask 1\Text Merge.Inputs[Primary Input].Columns[email]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="email"
+                      externalMetadataColumnId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[email]"
+                      lineageId="Package\Datenflusstask 1\JSON Source.Outputs[Root].Columns[email]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask 1\Text Merge.Inputs[Primary Input].Columns[text]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="text"
+                      externalMetadataColumnId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[text]"
+                      lineageId="Package\Datenflusstask 1\JSON Source.Outputs[Root].Columns[text]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask 1\Text Merge.Outputs[Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Error Output"
+                  synchronousInputId="Package\Datenflusstask 1\Text Merge.Inputs[Primary Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask 1\Text Merge.Outputs[Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask 1\Text Merge.Outputs[Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask 1\Text Merge.Outputs[Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask 1\Text Merge.Outputs[Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Datenflusstask 1\Text Merge.Outputs[Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="2048"
+                      lineageId="Package\Datenflusstask 1\Text Merge.Outputs[Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output]"
+                  name="Default Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[MergedText]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[MergedText]"
+                      name="MergedText"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[_RowIndex]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[_RowIndex]"
+                      name="_RowIndex"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[email]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[email]"
+                      name="email"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[text]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="4000"
+                      lineageId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output].Columns[text]"
+                      name="text"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Datenflusstask 1.Paths[Default Output]"
+              endId="Package\Datenflusstask 1\Kafka Destination.Inputs[Primary Input]"
+              name="Default Output"
+              startId="Package\Datenflusstask 1\Text Merge.Outputs[Default Output]" />
+            <path
+              refId="Package\Datenflusstask 1.Paths[Root]"
+              endId="Package\Datenflusstask 1\Text Merge.Inputs[Primary Input]"
+              name="Root"
+              startId="Package\Datenflusstask 1\JSON Source.Outputs[Root]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Datenflusstask 1"
+          TopLeft="98,140" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Datenflusstask 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Datenflusstask 1\Kafka Destination"
+          TopLeft="612,129" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Datenflusstask 1\JSON Source"
+          TopLeft="129,131" />
+        <NodeLayout
+          Size="134,42"
+          Id="Package\Datenflusstask 1\Text Merge"
+          TopLeft="375,118" />
+        <EdgeLayout
+          Id="Package\Datenflusstask 1.Paths[Root]"
+          TopLeft="275,152">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="100,-13"
+              Start="0,0"
+              End="92.5,-13">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="46,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46,0"
+                    Point2="50,0"
+                    Point3="50,-4" />
+                  <mssgle:LineSegment
+                    End="50,-9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50,-9"
+                    Point2="50,-13"
+                    Point3="54,-13" />
+                  <mssgle:LineSegment
+                    End="92.5,-13" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask 1.Paths[Default Output]"
+          TopLeft="509,139">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="103,11"
+              Start="0,0"
+              End="95.5,11">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="47.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47.5,0"
+                    Point2="51.5,0"
+                    Point3="51.5,4" />
+                  <mssgle:LineSegment
+                    End="51.5,7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.5,7"
+                    Point2="51.5,11"
+                    Point3="55.5,11" />
+                  <mssgle:LineSegment
+                    End="95.5,11" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
